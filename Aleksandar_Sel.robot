@@ -66,11 +66,65 @@ LoginKEY
     sleep    2
     [Teardown]    Close Browser
 
+TC_1_With_U_P
+    Go to home page
+    Maximize Browser Window
+    Sleep    2
+    Login
+
+TC_2_WIthout_U
+    Go to home page
+    input text    name:password    admin123
+    click element    xpath://html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button
+
+TC_3_Without_P
+    Go to home page
+    input text    name:username    Admin
+    click element    xpath://html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button
+
+TC_4_Without_P_U
+    Go to home page
+    click element    xpath://html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button
+
+TC_4_Admin_Menue
+    Go to home page
+    Login
+    sleep    2
+    click element    xpath://html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span
+
+TC_5_Menue
+    Go to home page
+    Set Selenium Speed    2
+    login
+    click element    xpath://html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span
+    click element    xpath://html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a/span
+    click element    xpath://html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li[3]/a/span
+
+TC_6_AdminClick
+    Go to home page
+    Login
+    sleep    2
+    click element    xpath://html/body/div/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a/span
+    sleep    2
+    Select From List By Label    xpath://html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div    ESS
+    sleep    2
+
+TC_7_DropDown
+    Open browser    http://localhost/st/robot.html    chrome
+    Maximize Browser Window
+    Set Selenium Speed    2
+    Select From List By Value    id:city    bitola
+    Select From List By Label    name:months    April
+    Select From List By Index    name:days    10
+    Select From List By Value    name:year    10
+
 *** Keywords ***
 Login
-    input text    name=username    Admin
-    input text    name=password    admin123
-    click element    xpath=/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button
+    input text    name:username    Admin
+    input text    name:password    admin123
+    click element    xpath://html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button
 
 Go to home page
     open browser    ${url}    chrome
+    Maximize Browser Window
+    sleep    2
