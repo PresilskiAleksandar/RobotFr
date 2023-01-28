@@ -165,7 +165,7 @@ TC20_IF
     ${row}    Set Variable    "Marki_name"
     FOR    ${row}    IN    @{queryResults}
         IF    ${row}=="BMW"
-            Log    ${row}
-    END    END
+        Log    ${row}
+        END
     END
     [Teardown]    Disconnect From Database

@@ -12,7 +12,7 @@ TC1_ElementSHouldBe
     Maximize Browser Window
     title should be    nopCommerce demo store
     sleep    2
-    click link    xpath://a[contains(text(),'Log in')]
+    click link    xpath=//a[contains(text(),'Log in')]
     ${"email_text"}    Set Variable    id:Email
     Element Should Be Visible    ${"email_text"}
     Element Should Be Enabled    ${"email_text"}
@@ -46,11 +46,11 @@ TC4_DropDown
     [Tags]    Sel_4
     open browser    https://chercher.tech/practice/practice-dropdowns-selenium-webdriver    chrome
     Maximize Browser Window
-    Select From List By Label    id:first    Yahoo
+    Select From List By Label    id=first    Yahoo
     sleep    2
-    Select From List By Index    id:first    2
+    Select From List By Index    id=first    2
     sleep    2
-    Select From List By Value    id:first    Microsoft
+    Select From List By Value    id=first    Microsoft
     Sleep    2
     Close Browser
 
@@ -59,10 +59,10 @@ TC5_ListBoxes
     open browser    https://chercher.tech/practice/practice-dropdowns-selenium-webdriver    chrome
     Maximize Browser Window
     Set Selenium Speed    1second
-    Select From List By Index    id:second    2
-    Select From List By Label    id:second    Pizza
-    Select From List By Value    id:second    bonda
-    Unselect From List By Label    id:second    Pizza
+    Select From List By Index    id=second    2
+    Select From List By Label    id=second    Pizza
+    Select From List By Value    id=second    bonda
+    Unselect From List By Label    id=second    Pizza
     Close Browser
 
 TC6_Reg_test_SelSpeed
@@ -73,12 +73,12 @@ TC6_Reg_test_SelSpeed
     Maximize Browser Window
     Set Selenium Speed    2 seconds
     Select Radio Button    Gender    M
-    input text    id:FirstName    Aleksandar
-    input text    id:LastName    Presilski
-    input text    id:Email    aleksandarpresilski@gmail.com
-    input text    id:Password    aleksandar
-    input text    id:ConfirmPassword    aleksandar
-    click button    id:register-button
+    input text    id=FirstName    Aleksandar
+    input text    id=LastName    Presilski
+    input text    id=Email    aleksandarpresilski@gmail.com
+    input text    id=Password    aleksandar
+    input text    id=ConfirmPassword    aleksandar
+    click button    id=register-button
     ${speed}    Get Selenium Speed
     Log To Console    ${speed}
     Close Browser
@@ -90,12 +90,12 @@ TC7_SelTimeout
     Set Selenium Timeout    7 seconds
     wait until page contains    register1
     Select Radio Button    Gender    M
-    input text    id:FirstName    Aleksandar
-    input text    id:LastName    Presilski
-    input text    id:Email    aleksandarpresilski@gmail.com
-    input text    id:Password    aleksandar
-    input text    id:ConfirmPassword    aleksandar
-    click button    id:register-button
+    input text    id=FirstName    Aleksandar
+    input text    id=LastName    Presilski
+    input text    id=Email    aleksandarpresilski@gmail.com
+    input text    id=Password    aleksandar
+    input text    id=ConfirmPassword    aleksandar
+    click button    id=register-button
     Close Browser
 
 TC8_ImplicitWait
@@ -104,12 +104,12 @@ TC8_ImplicitWait
     Maximize Browser Window
     Set Selenium Implicit Wait    5 seconds
     Select Radio Button    Gender    M
-    input text    id:FirstName1    Aleksandar
-    input text    id:LastName    Presilski
-    input text    id:Email    aleksandarpresilski@gmail.com
-    input text    id:Password    aleksandar
-    input text    id:ConfirmPassword    aleksandar
-    click button    id:register-button
+    input text    id=FirstName1    Aleksandar
+    input text    id=LastName    Presilski
+    input text    id=Email    aleksandarpresilski@gmail.com
+    input text    id=Password    aleksandar
+    input text    id=ConfirmPassword    aleksandar
+    click button    id=register-button
     Close Browser
 
 TC9_Alerts_dissmis
@@ -117,7 +117,7 @@ TC9_Alerts_dissmis
     open browser    https://testautomationpractice.blogspot.com/    chrome
     Maximize Browser Window
     sleep    2
-    click element    xpath://html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[2]/div/aside/div/div[2]/div[1]/button
+    click element    xpath=//html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[2]/div/aside/div/div[2]/div[1]/button
     sleep    2
     Alert Should Be Present    Press a button!
     sleep    2
@@ -128,7 +128,7 @@ TC10_Alerts_accept
     [Tags]    Sel_10
     open browser    https://testautomationpractice.blogspot.com/    chrome
     Maximize Browser Window
-    click element    xpath://html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[2]/div/aside/div/div[2]/div[1]/button
+    click element    xpath=//html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[2]/div/aside/div/div[2]/div[1]/button
     sleep    2
     handle alert    accept
     Close Browser
@@ -137,7 +137,7 @@ TC11_Alerts_Leave
     [Tags]    Sel_11
     open browser    https://testautomationpractice.blogspot.com/    chrome
     Maximize Browser Window
-    click element    xpath://html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[2]/div/aside/div/div[2]/div[1]/button
+    click element    xpath=//html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[2]/div/aside/div/div[2]/div[1]/button
     sleep    2
     handle alert    leave
     Close Browser
@@ -163,9 +163,9 @@ TC13_TabbedWindows
     open browser    https://demo.automationtesting.in/Windows.html    chrome
     Maximize Browser Window
     Set Selenium Speed    1 second
-    Click Element    xpath://html/body/div[1]/div/div/div/div[2]/div[1]/a/button
+    Click Element    xpath=//html/body/div[1]/div/div/div/div[2]/div[1]/a/button
     select window    title=Selenium
-    Click Element    xpath://html/body/header/nav/div/ul/li[3]/a
+    Click Element    xpath=//html/body/header/nav/div/ul/li[3]/a
     Close All Browsers
 
 TC14_MultipleBrowsers
@@ -188,11 +188,11 @@ TC15_CaptureSreen
     sleep    2
     Maximize Browser Window
     sleep    2
-    input text    xpath://html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input    Admin
+    input text    xpath=//html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input    Admin
     sleep    2
-    input text    xpath://html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input    admin123
+    input text    xpath=//html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input    admin123
     sleep    2
-    capture element screenshot    xpath://*[@id="app"]/div[1]/div/div[1]/div/div[1]/img    C:/Users/Aleksandar/Desktop/Demo_Project/logo.png
+    capture element screenshot    xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[1]/img    C:/Users/Aleksandar/Desktop/Demo_Project/logo.png
     sleep    2
     capture page screenshot    C:/Users/Aleksandar/Desktop/Demo_Project/CapturePage.png
     Close Browser
@@ -201,14 +201,14 @@ TC16_RightClick
     [Tags]    Sel_16
     open browser    https://swisnl.github.io/jQuery-contextMenu/demo.html    chrome
     Maximize Browser Window
-    Open Context Menu    xpath://html/body/div/section/div/div/div/p/span
+    Open Context Menu    xpath=//html/body/div/section/div/div/div/p/span
     sleep    2
 
 TC17_DoubleClick
     [Tags]    Sel_17
     open browser    https://testautomationpractice.blogspot.com/    chrome
     Maximize Browser Window
-    Double Click Element    xpath://html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[3]/div/aside/div/div[1]/div[1]/button
+    Double Click Element    xpath=//html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[3]/div/aside/div/div[1]/div[1]/button
     sleep    2
     Close Browser
 
@@ -216,7 +216,7 @@ TC18_Drag_Drop
     [Tags]    Sel_18
     open browser    http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html    chrome
     Maximize Browser Window
-    Drag And Drop    id:box6    id:box106
+    Drag And Drop    id=box6    id:box106
     sleep    2
     Close Browser
 
@@ -226,7 +226,7 @@ TC19_ScrollPage
     Maximize Browser Window
     Execute Javascript    window.scrollTo(0,1500)
     sleep    3
-    Scroll Element Into View    xpath://html/body/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/table[1]/tbody/tr[73]/td[1]/img
+    Scroll Element Into View    xpath=//html/body/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/table[1]/tbody/tr[73]/td[1]/img
     sleep    2
     Execute Javascript    window.scrollTo(0,document.body.scrollHeight)
     sleep    2
@@ -236,8 +236,8 @@ TC20_TableDemo
     [Tags]    Sel_20
     open browser    https://testautomationpractice.blogspot.com/    chrome
     Maximize Browser Window
-    ${rows}=    get element count    xpath://body/div[4]/div[2]/div[2]/div[2]/footer[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/table[1]/tbody/tr
-    ${coloms}=    get element count    xpath://body/div[4]/div[2]/div[2]/div[2]/footer[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/table[1]/tbody/tr[1]/th
+    ${rows}=    get element count    xpath=//body/div[4]/div[2]/div[2]/div[2]/footer[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/table[1]/tbody/tr
+    ${coloms}=    get element count    xpath=//body/div[4]/div[2]/div[2]/div[2]/footer[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/table[1]/tbody/tr[1]/th
     log to console    ${rows}
     log to console    ${coloms}
 
@@ -246,27 +246,27 @@ TC21_Web
     open browser    https://www.techlistic.com/p/selenium-practice-form.html    chrome
     Maximize Browser Window
     Set Selenium Speed    1
-    input text    name:firstname    Aleksandar
-    input text    name:lastname    Presilski
+    input text    name=firstname    Aleksandar
+    input text    name=lastname    Presilski
     Select Radio Button    sex    Male
     Select Radio Button    exp    1
-    input text    id:datepicker    16.12.2022
+    input text    id=datepicker    16.12.2022
     Select Checkbox    Automation Tester
     Select Checkbox    Selenium Webdriver
-    Select From List By Label    id:continents    Africa
-    Select From List By Label    id:selenium_commands    Switch Commands
-    Choose File    id:photo    C:\\Users\\Aleksandar\\Desktop\\Demo_Project\\New folder\\logo.png
+    Select From List By Label    id=continents    Africa
+    Select From List By Label    id=selenium_commands    Switch Commands
+    Choose File    id=photo    C:\\Users\\Aleksandar\\Desktop\\Demo_Project\\New folder\\logo.png
 
 TC22_UploadFile
     [Tags]    Sel_22
     open browser    https://the-internet.herokuapp.com/upload    chrome
     Maximize Browser Window
     sleep    2
-    Wait Until Element Is Visible    xpath://html/body/div[2]/div/div[1]/h3
+    Wait Until Element Is Visible    xpath=//html/body/div[2]/div/div[1]/h3
     sleep    2
-    Choose File    id:file-upload    C:\\Users\\Aleksandar\\Desktop\\Demo_Project\\New folder\\logo.png
+    Choose File    id=file-upload    C:\\Users\\Aleksandar\\Desktop\\Demo_Project\\New folder\\logo.png
     sleep    2
-    Click Element    id:file-submit
+    Click Element    id=file-submit
     sleep    2
     wait until page contains    File Uploaded!
     Close Browser
@@ -276,38 +276,38 @@ TC23_Twitter
     open browser    https://twitter.com/    chrome
     Maximize Browser Window
     Set Selenium Speed    2
-    click element    xpath://html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/section[1]/div[3]/a[1]/div[1]/span[1]/span[1]
+    click element    xpath=//html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/section[1]/div[3]/a[1]/div[1]/span[1]/span[1]
     wait until page contains    Create your account
-    input text    name:name    Aleksandar
-    click element    xpath://html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[3]/span
-    input text    name:email    aleksandarpresilski@gmail.com
-    Select From List By Label    xpath://html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[4]/div[3]/div/div[1]/select    September
-    Select From List By Label    xpath://html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[4]/div[3]/div/div[2]/select    23
-    Select From List By Label    xpath://html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[4]/div[3]/div/div[3]/select    1990
-    click element    xpath://html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/div/div
+    input text    name=name    Aleksandar
+    click element    xpath=//html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[3]/span
+    input text    name=email    aleksandarpresilski@gmail.com
+    Select From List By Label    xpath=//html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[4]/div[3]/div/div[1]/select    September
+    Select From List By Label    xpath=//html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[4]/div[3]/div/div[2]/select    23
+    Select From List By Label    xpath=//html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/div[4]/div[3]/div/div[3]/select    1990
+    click element    xpath=//html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/div/div
     wait until page contains    Customize your experience
-    click element    xpath://*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/div/div
+    click element    xpath=//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/div/div
     wait until page contains    Create your account
-    click element    xpath://*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div
+    click element    xpath=//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div
     close browser
 
 TC24_W3school
     Open browser    https://www.w3schools.com/    chrome
     Maximize Browser Window
     Set Selenium Speed    1
-    Input text    id:search2    Html
-    Click Element    id:learntocode_searchbtn
+    Input text    id=search2    Html
+    Click Element    id=learntocode_searchbtn
     Close Browser
 
 TC33
     open browser    https://www.tutorialspoint.com/    chrome
     Maximize Browser Window
     sleep    2
-    click element    xpath://button[@class='f-button fc-cta-consent fc-primary-button' and @aria-label='Consent']
+    click element    xpath=//button[@class='f-button fc-cta-consent fc-primary-button' and @aria-label='Consent']
 
 TC44
     open browser    https://www.tutorialspoint.com/    chrome
     Maximize Browser Window
     sleep    2
-    wait until element is visible    xpath://button[@class='f-button fc-cta-consent fc-primary-button' and @aria-label='Consent']
-    Click Element    xpath://button[@class='f-button fc-cta-consent fc-primary-button' and @aria-label='Consent']
+    wait until element is visible    xpath=//button[@class='f-button fc-cta-consent fc-primary-button' and @aria-label='Consent']
+    Click Element    xpath=//button[@class='f-button fc-cta-consent fc-primary-button' and @aria-label='Consent']
