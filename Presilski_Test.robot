@@ -236,8 +236,11 @@ TC20_TableDemo
     [Tags]    Sel_20
     open browser    https://testautomationpractice.blogspot.com/    chrome
     Maximize Browser Window
+    sleep    3
     ${rows}=    get element count    xpath=//body/div[4]/div[2]/div[2]/div[2]/footer[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/table[1]/tbody/tr
+    sleep    3
     ${coloms}=    get element count    xpath=//body/div[4]/div[2]/div[2]/div[2]/footer[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/table[1]/tbody/tr[1]/th
+    sleep    3
     log to console    ${rows}
     log to console    ${coloms}
 

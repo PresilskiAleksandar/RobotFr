@@ -124,7 +124,7 @@ TC_6_AdminClick
     sleep    2
     click element    xpath=//html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div
     sleep    2
-    Select From List By Label    role:listbox    Admin
+    Select From List By Label    xpath=//html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div    Admin
     sleep    2
     Close Browser
 
