@@ -1,7 +1,7 @@
 *** Settings ***
 Suite Setup
 Suite Teardown
-Library           Selenium2Library
+Library           ExtendedSelenium2Library
 
 *** Variables ***
 ${url}            https://opensource-demo.orangehrmlive.com/web/index.php/auth/login

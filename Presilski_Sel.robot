@@ -1,7 +1,7 @@
 *** Settings ***
 Suite Setup
 Suite Teardown
-Library           Selenium2Library
+Library           ExtendedSelenium2Library
 
 *** Variables ***
 ${url}            https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
@@ -124,8 +124,9 @@ TC_6_AdminClick
     sleep    2
     click element    xpath=//html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div
     sleep    2
-    Select From List By Label    xpath=//html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div    Admin
+    Select From List By index    xpath= //body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]    Admin
     sleep    2
+    click element    xpath=//body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]
     Close Browser
 
 TC_7_DropDown

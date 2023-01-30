@@ -1,5 +1,5 @@
 *** Settings ***
-Library           Selenium2Library
+Library           ExtendedSelenium2Library
 Variables         ../../../Users/Aleksandar/Desktop/New folder/Locators.py
 
 *** Variables ***
